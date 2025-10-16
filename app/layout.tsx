@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Minecraft导航网站',
   description: '专业的Minecraft资源导航网站',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

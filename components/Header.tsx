@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Menu, Drawer, Button, Input } from 'antd'
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
+import Image from 'next/image'
 
 interface HeaderProps {
   activeTab: string
@@ -77,7 +78,16 @@ export default function Header({ activeTab, setActiveTab, onSearch }: HeaderProp
     <header className="bg-black text-white shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Minecraft导航</h1>
+          <div className="flex items-center space-x-2">
+            <Image 
+              src="/favicon.ico" 
+              alt="Minecraft导航图标" 
+              width={24} 
+              height={24}
+              className="text-2xl"
+            />
+            <h1 className="text-2xl font-bold">Minecraft导航</h1>
+          </div>
           
           {/* 桌面端搜索框 - 隐藏在小屏幕上 */}
           <div className="hidden md:flex items-center space-x-4">
