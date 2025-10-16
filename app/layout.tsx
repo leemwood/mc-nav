@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/locale/zh_CN'
+import AnnouncementContainer from '@/components/AnnouncementContainer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className={inter.className}>
         <ConfigProvider locale={zhCN}>
+          <AnnouncementContainer />
           {children}
         </ConfigProvider>
       </body>

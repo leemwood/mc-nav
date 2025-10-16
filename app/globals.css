@@ -25,3 +25,32 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* 公告组件样式 */
+.announcement-container {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.announcement-alert {
+  border-radius: 0 !important;
+  border: none !important;
+  text-align: center !important;
+}
+
+.announcement-close-btn {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+
+.announcement-close-btn:hover {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .announcement-alert {
+    font-size: 14px !important;
+    padding: 8px 16px !important;
+  }
+}
