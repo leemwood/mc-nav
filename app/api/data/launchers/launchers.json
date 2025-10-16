@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "官方启动器",
+    "description": "Minecraft官方启动器",
+    "downloadUrl": "https://www.minecraft.net/zh-hans/download",
+    "version": "最新版",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
+    "id": 2,
+    "name": "HMCL",
+    "description": "Hello Minecraft! Launcher - 功能强大的第三方启动器",
+    "downloadUrl": "https://hmcl.huangyuhui.net/download",
+    "version": "3.5.5",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
+    "id": 3,
+    "name": "PCL2",
+    "description": "功能丰富的国产启动器",
+    "downloadUrl": "https://github.com/LongChengK/PCL2/releases",
+    "version": "2.2.9",
+    "platform": "Windows"
+  },
+  {
+    "id": 4,
+    "name": "MultiMC",
+    "description": "轻量级多实例启动器",
+    "downloadUrl": "https://multimc.org/#Download",
+    "version": "0.7.0",
+    "platform": "Windows/Mac/Linux"
+  },
+  {
+    "id": 5,
+    "name": "BakaXL",
+    "description": "功能全面的国产启动器",
+    "downloadUrl": "https://github.com/BakaXL-Launcher/BakaXL/releases",
+    "version": "3.2.0",
+    "platform": "Windows"
+  }
+]
