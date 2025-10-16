@@ -27,9 +27,10 @@ export async function GET(request: Request) {
       },
     })
   } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : '未知错误'
     return new Response(JSON.stringify({ 
       error: '代理请求失败', 
-      message: error.message 
+      message: errorMessage 
     }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
