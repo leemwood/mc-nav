@@ -8,11 +8,13 @@
 - **实用网站导航** - 汇集Minecraft相关的官方网站、社区、模组平台等资源
 - **启动器下载** - 提供各种Minecraft启动器的下载链接
 - **代理下载支持** - 针对GitHub资源提供代理下载功能
+- **响应式导航栏** - 支持桌面端和移动端汉堡菜单
+- **透明背景页脚** - 现代化的页脚设计
 - **响应式设计** - 完美支持桌面端和移动端访问
 
 ### 🛠 技术栈
 - **前端框架**: Next.js 14.0.0
-- **UI组件库**: Element Plus 2.4.0
+- **UI组件库**: Ant Design 5.x
 - **样式框架**: Tailwind CSS 3.3.0
 - **开发语言**: TypeScript 5.0.0
 - **HTTP客户端**: Axios 1.6.0
@@ -45,21 +47,23 @@ npm start
 ```
 mc-nav/
 ├── app/                    # Next.js App Router
+│   ├── api/               # API路由
+│   │   ├── data/          # 数据接口
+│   │   │   ├── launchers/ # 启动器API
+│   │   │   └── websites/  # 网站API
+│   │   └── proxy/         # 代理下载API
 │   ├── layout.tsx         # 根布局组件
 │   ├── page.tsx           # 首页组件
 │   └── globals.css        # 全局样式
 ├── components/             # 可复用组件
-│   ├── Header.tsx         # 导航头部
+│   ├── Header.tsx         # 导航头部（响应式设计）
 │   ├── WebsitesSection.tsx # 网站导航组件
 │   ├── LaunchersSection.tsx # 启动器下载组件
-│   └── AboutSection.tsx   # 关于页面组件
-├── api/                    # API接口
-│   ├── data/              # 数据接口
-│   │   ├── websites.json  # 网站数据
-│   │   ├── launchers.json # 启动器数据
-│   │   ├── websites.ts    # 网站API路由
-│   │   └── launchers.ts   # 启动器API路由
-│   └── proxy.ts           # 代理下载接口
+│   ├── AboutSection.tsx   # 关于页面组件
+│   └── Footer.tsx         # 透明背景页脚
+├── api/                    # 数据文件目录
+│   ├── launchers.json     # 启动器数据
+│   └── websites.json      # 网站数据
 └── 配置文件
     ├── package.json       # 项目依赖配置
     ├── next.config.js     # Next.js配置
@@ -70,7 +74,7 @@ mc-nav/
 ## 数据管理
 
 ### 网站数据
-编辑 `api/data/websites.json` 文件来管理网站导航数据：
+编辑 `api/websites.json` 文件来管理网站导航数据：
 
 ```json
 {
@@ -83,7 +87,7 @@ mc-nav/
 ```
 
 ### 启动器数据
-编辑 `api/data/launchers.json` 文件来管理启动器数据：
+编辑 `api/launchers.json` 文件来管理启动器数据：
 
 ```json
 {
@@ -124,7 +128,7 @@ mc-nav/
 ## 部署说明
 
 ### Vercel部署（推荐）
-1. 将代码推送到GitHub仓库
+1. 将代码推送到GitHub仓库（主分支：`main`）
 2. 在Vercel中导入项目
 3. 配置环境变量（如有需要）
 4. 自动部署完成
@@ -133,6 +137,12 @@ mc-nav/
 - 支持所有支持Node.js的平台
 - 构建命令：`npm run build`
 - 启动命令：`npm start`
+
+### GitHub Pages部署
+1. 在GitHub仓库设置中启用GitHub Pages
+2. 选择`main`分支作为源分支
+3. 选择根目录作为发布目录
+4. 访问 `https://leemwood.github.io/mc-nav` 查看部署结果
 
 ## 贡献指南
 
@@ -151,9 +161,17 @@ mc-nav/
 
 ## 联系方式
 
-- 项目地址：https://github.com/your-username/mc-nav
-- 问题反馈：创建Issue或发送邮件至contact@mc-nav.com
+- 项目地址：https://github.com/leemwood/mc-nav
+- 问题反馈：在GitHub仓库中创建Issue
 
 ---
 
 **注意**: 本项目仅供学习和参考使用，请遵守相关网站的使用条款和版权规定。
+
+## 更新记录
+
+- 2024-01-01: 项目初始化，完成基础功能开发
+- 2024-01-02: 添加响应式导航栏（汉堡菜单）
+- 2024-01-03: 添加透明背景页脚组件
+- 2024-01-04: 清理项目结构，删除重复文件
+- 2024-01-05: 更新README文档，同步项目最新状态
