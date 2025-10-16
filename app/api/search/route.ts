@@ -2,6 +2,8 @@ import { NextRequest } from 'next/server'
 import websites from '../data/websites/websites.json'
 import launchers from '../data/launchers/launchers.json'
 
+export const runtime = 'edge';
+
 interface SearchResult {
   type: 'website' | 'launcher'
   id: number
